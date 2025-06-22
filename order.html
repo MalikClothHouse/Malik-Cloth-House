@@ -1,93 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Order Now - Malik Cloth House</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #f0f2f5, #ffffff);
-      padding: 30px;
-    }
-    .container {
-      max-width: 500px;
-      margin: auto;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h2 {
-      text-align: center;
-      color: #0c2d57;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .payment-instructions {
-      display: none;
-      margin-top: 10px;
-      color: #d40000;
-      font-weight: bold;
-    }
-    button {
-      margin-top: 20px;
-      width: 100%;
-      background-color: #0c2d57;
-      color: white;
-      border: none;
-      padding: 12px;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #0a2447;
-    }
-  </style>
-  <script>
-    function showInstructions(value) {
-      const instructions = document.getElementById('instructions');
-      if (value === 'JazzCash' || value === 'EasyPaisa') {
-        instructions.style.display = 'block';
-      } else {
-        instructions.style.display = 'none';
-      }
-    }
-  </script>
-</head>
-<body>
+<form action="https://formsubmit.co/batoolalimalik74@gmail.com" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="tel" name="phone" placeholder="Phone Number" required>
+  <input type="text" name="address" placeholder="Home Address" required>
 
-  <div class="container">
-    <h2>Order Now</h2>
-    <form action="https://formsubmit.co/batoolalimalik74@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-      <input type="text" name="address" placeholder="Home Address" required>
+  <select name="payment_method" required>
+    <option value="">Select Payment Method</option>
+    <option value="Cash on Delivery">Cash on Delivery</option>
+    <option value="JazzCash">JazzCash</option>
+    <option value="EasyPaisa">EasyPaisa</option>
+  </select>
 
-      <select name="payment_method" required onchange="showInstructions(this.value)">
-        <option value="">Select Payment Method</option>
-        <option value="JazzCash">JazzCash</option>
-        <option value="EasyPaisa">EasyPaisa</option>
-        <option value="CashOnDelivery">Cash on Delivery</option>
-      </select>
+  <!-- Show this message on your form for customer -->
+  <p><strong>JazzCash / EasyPaisa Number:</strong> 03445242910</p>
 
-      <div class="payment-instructions" id="instructions">
-        Pay to this number: <strong>03445242910</strong><br>
-        After sending, click Submit to place your order.
-      </div>
+  <textarea name="additional_notes" placeholder="Any extra notes (optional)"></textarea>
 
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="thankyou.html">
+  <!-- Hidden fields -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="thankyou.html">
 
-      <button type="submit">Submit Order</button>
-    </form>
-  </div>
-
-</body>
-</html>
+  <button type="submit">Submit Order</button>
+</form>
