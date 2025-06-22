@@ -18,7 +18,6 @@
     }
     h1 {
       margin: 0;
-      font-size: 28px;
     }
     .gallery {
       display: flex;
@@ -43,12 +42,10 @@
     .buttons select {
       margin: 5px;
       padding: 5px;
-      width: 90%;
     }
     .price {
       color: green;
       font-weight: bold;
-      margin-top: 10px;
     }
     .order-now {
       margin-top: 10px;
@@ -58,69 +55,20 @@
       border: none;
       cursor: pointer;
     }
-
-    /* Mobile Friendly Styles */
     @media (max-width: 600px) {
       .product {
         width: 90%;
       }
-
-      h1 {
-        font-size: 22px;
-      }
-
-      .coming-soon h1 {
-        font-size: 28px;
-      }
-
-      .coming-soon p {
-        font-size: 16px;
-      }
     }
-
-    .coming-soon {
-      height: 29vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background-image: url('images/coming-soon-bg.jpg'); /* Optional */
-      background-position: center;
-      background-size: cover;
-      color: #0c2d57;
-      padding: 20px;
-    }
-
-    .coming-soon h1 {
-      font-size: 55px;
-      margin-bottom: 10px;
-    }
-
-    .coming-soon p {
-      font-size: 20px;
-      color: #333;
-    }
-
   </style>
 </head>
 <body>
-
   <header>
     <h1>___Unstitched Collection___</h1>
   </header>
 
-  <!-- Coming Soon Banner -->
-  <div class="coming-soon">
-    <div>
-      <h1>Coming Soon!</h1>
-      <p>More Styles Coming Soon - Stay Tuned!!</p>
-    </div>
-  </div>
-
-  <!-- Products Gallery -->
   <div class="gallery">
-    <!-- Product blocks repeated -->
-    <!-- Sample product (copy this block for more) -->
+    <!-- Example Product Block -->
     <div class="product">
       <img src="unstiched 1.webp" alt="Unstitched Product">
       <div class="buttons">
@@ -130,7 +78,6 @@
       <div class="price">PKR 2,500</div>
       <button class="order-now" onclick="orderNow()">Order Now</button>
     </div>
-</div>
      <div class="product">
       <img src="unstiched 2.webp" alt="Unstitched Product">
       <div class="buttons">
@@ -215,8 +162,54 @@
     <!-- Repeat above block 10 times or copy/paste and change image names -->
   </div>
    </div>
-    <!-- Repeat for other products -->
-    <!-- ... Your other product blocks here ... -->
+
+ <style>
+   
+    .coming-soon {
+      height: 29vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-image: url('images/coming-soon-bg.jpg'); /* Optional: add a nice BG */
+
+      background-position: center;
+      color: #0c2d57;
+      padding: 20px;
+    }
+
+    .coming-soon h1 {
+      font-size: 55px;
+      margin-bottom: 10px;
+    }
+
+    .coming-soon p {
+      font-size: 20px;
+      color: #333;
+    }
+
+    @media screen and (max-width: 1000px) {
+      .coming-soon h1 {
+        font-size: 50px;
+      }
+      .coming-soon p {
+        font-size: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="coming-soon">
+    <div>
+      <h1>Coming Soon!</h1>
+      <p>More Styles Coming Soon - Stay Tuned!!</p>
+    </div>
+</head>
+<body>
+
+ 
+    
   </div>
 
   <script>
@@ -224,7 +217,7 @@
       const name = prompt("Enter your name:");
       const phone = prompt("Enter your phone number:");
       const address = prompt("Enter your address:");
-      const payment = prompt("Select Payment Method: JazzCash / EasyPaisa / COD");
+      const payment = prompt("Select Payment Method: Stripe / JazzCash / EasyPaisa / COD");
       if (name && phone && address && payment) {
         alert("Thanks " + name + "! Your order has been placed successfully using " + payment + ".");
       } else {
@@ -232,6 +225,5 @@
       }
     }
   </script>
-
 </body>
 </html>
