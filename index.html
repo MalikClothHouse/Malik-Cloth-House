@@ -254,51 +254,48 @@ header::after {
         <div class="product"><img src="ready made 11.webp" alt="Readymade 10"><div class="buttons"><select><option>Select Size</option><option>S</option><option>M</option><option>L</option><option>XL</option></select><select><option>Select Color</option><option>Red</option><option>Blue</option><option>Black</option></select></div><div class="price">PKR 3,500</div><button class="order-now" onclick="orderNow()">Order Now</button></div>
 
         <!-- END Products -->
- <style>
-   
-    .coming-soon {
-      height: 29vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background-image: url('images/coming-soon-bg.jpg'); /* Optional: add a nice BG */
+<style>
+  .coming-soon {
+    height: 29vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('images/coming-soon-bg.jpg'); /* Optional: add a nice BG */
+    background-position: center;
+    background-size: cover;
+    color: #0c2d57;
+    padding: 20px;
+  }
 
-      background-position: center;
-      color: #0c2d57;
-      padding: 20px;
+  .coming-soon h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+  }
+
+  .coming-soon p {
+    font-size: 20px;
+    color: #333;
+  }
+
+  /* Mobile Responsive */
+  @media screen and (max-width: 600px) {
+    .coming-soon {
+      flex-direction: column;
+      height: auto;
+      padding: 40px 20px;
     }
 
     .coming-soon h1 {
-      font-size: 55px;
-      margin-bottom: 10px;
+      font-size: 32px;
     }
 
     .coming-soon p {
-      font-size: 20px;
-      color: #333;
+      font-size: 16px;
     }
+  }
+</style>
 
-    @media screen and (max-width: 1000px) {
-      .coming-soon h1 {
-        font-size: 50px;
-      }
-      .coming-soon p {
-        font-size: 500px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="coming-soon">
-    <div>
-      <h1>Coming Soon!</h1>
-      <p>More Styles Coming Soon - Stay Tuned!!</p>
-    </div>
-  </div>
-  <header>
-  
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
 <footer style="background: linear-gradient(to right, #0c2d57, #1f4068); color: white; padding: 30px 20px; font-family: Arial, sans-serif; font-size: 16px;">
