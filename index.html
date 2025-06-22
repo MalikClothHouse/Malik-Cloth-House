@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malik Cloth House</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #082567;
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+        }
+        header h1 {
+            margin: 5px;
+        }
+        header p {
+            margin: 0;
+            font-size: 14px;
+        }
+        nav {
+            background-color: #0c2d57;
+            overflow: hidden;
+            text-align: center;
+        }
+        nav a {
+            display: inline-block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #041b3d;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+            width: 250px;
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .buttons {
+            margin: 5px 0;
+        }
+        .buttons select {
+            margin: 5px;
+            padding: 5px;
+        }
+        .price {
+            color: green;
+            font-weight: bold;
+        }
+        .order-now {
+            margin-top: 10px;
+            background-color: #0c2d57;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #082567;
+            color: white;
+            text-align: center;
+            padding: 20px 1000px;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin: 0 20px;
+            color: white;
+            text-decoration:seashell;
+        }
+    </style>
+</head>
+<body>
+ <!-- Add Google Font Link in <head> -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
+
+<style>
+    header {
+        background: linear-gradient(to right, #1f4068, #0c2d57);
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
+        font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+        font-size: 42px;
+        margin-bottom: 10px;
+        letter-spacing: 15px;
+    }
+
+    header p {
+        font-size: 18px;
+        margin: 5px 0;
+    }
+
+    @media (max-width: 600px) {
+        header h1 {
+            font-size: 30px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+    }
+</style>
+
+<header>
+    <h1>Malik Cloth House</h1>
+    <p>Main Bazar Bhimber</p>
+    <p><em>___Fashion That Defines You___</em></p>
+</header>
+<style>
+header::after {
+      content: "Managing Director : Malik Ali Raza";
+      display: block;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #f1c40f;
+      margin-top: 10px;
+      border-top: 2px solid #f1c40f;
+      padding-top: 10px;
+    }
+</style>
+ 
+  <style>
+
+  </style>
+
+
+   
+    <nav>
+        <a href="index.html">Home Page</a>
+        <a href="unstiched.html">Unstitched</a>
+        <a href="ready to wear.html">Ready to Wear</a>
+        <a href="newarrivals.html">New Arrivals</a>
+        <a href="sale.html">Sale</a>
+    </nav>
+
+    <div class="gallery">
+        <!-- Repeat for each product -->
+        <div class="product">
+            <img src="image 1.jpg" alt="Product 1">
+            <div class="buttons">
+                <select>
+                    <option>Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+                <select>
+                    <option>Select Color</option>
+                    <option>Red</option>
+                    <option>Blue</option>
+                    <option>Black</option>
+                </select>
+            </div>
+            <div class="price">PKR 3,500</div>
+            <button class="order-now" onclick="orderNow()">Order Now</button>
+        </div>
+        <div class="product">
+            <img src="image 2.jpg" alt="Product 1">
+            <div class="buttons">
+                <select>
+                    <option>Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+                <select>
+                    <option>Select Color</option>
+                    <option>Red</option>
+                    <option>Blue</option>
+                    <option>Black</option>
+                </select>
+            </div>
+            <div class="price">PKR 3,500</div>
+            <button class="order-now" onclick="orderNow()">Order Now</button>
+        </div>
+        <div class="product">
+            <img src="image 3.jpg" alt="Product 1">
+            <div class="buttons">
+                <select>
+                    <option>Select Size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+                <select>
+                    <option>Select Color</option>
+                    <option>Red</option>
+                    <option>Blue</option>
+                    <option>Black</option>
+                </select>
+            </div>
+            <div class="price">PKR 3,500</div>
+            <button class="order-now" onclick="orderNow()">Order Now</button>
+        </div>
+        <!-- Add 9 more products like above -->
+    </div>
+  </style>
+</head>
+<body>
+    <div class="gallery">
+        <!-- 10 product blocks -->
+        <!-- Use your actual image paths in place of sampleX.jpg -->
+        <!-- Product Block Template Repeated 10 Times -->
+        <!-- You can customize name, price, image etc -->
+        
+        <!-- START Products -->
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="ready made 1.webp" alt="Readymade 1">
+            <div class="buttons">
+                <select><option>Select Size</option><option>S</option><option>M</option><option>L</option><option>XL</option></select>
+                <select><option>Select Color</option><option>Red</option><option>Blue</option><option>Black</option></select>
+            </div>
+            <div class="price">PKR 3,000</div>
+            <button class="order-now" onclick="orderNow()">Order Now</button>
+        </div>
+
+        <!-- Repeat 9 more -->
+        <div class="product"><img src="ready made1.webp" alt="Readymade 2"><div class="buttons"><select><option>Select Size</option><option>S</option><option>M</option><option>L</option><option>XL</option></select><select><option>Select Color</option><option>Red</option><option>Blue</option><option>Black</option></select></div><div class="price">PKR 3,200</div><button class="order-now" onclick="orderNow()">Order Now</button></div>
+        <div class="product"><img src="ready made 2.webp" alt="Readymade 3"><div class="buttons"><select><option>Select Size</option><option>S</option><option>M</option><option>L</option><option>XL</option></select><select><option>Select Color</option><option>Red</option><option>Blue</option><option>Black</option></select></div><div class="price">PKR 3,400</div><button class="order-now" onclick="orderNow()">Order Now</button></div>
+        <div class="product"><img src="ready made 3.webp" alt="Readymade 4"><div class="buttons"><select><option>Select Size</option><option>S</option><option>M</option><option>L</option><option>XL</option></select><select><option>Select Color</option><option>Red</option><option>Blue</option><option>Black</option></select></div><div class="price">PKR 3,100</div><button class="order-now" onclick="orderNow()">Order Now</button></div>
+        <div class="product"><img src="ready made 4.avif" alt="Readymade 5"><div class="buttons"><select><option>Select Size</option><option>S</option><option>M</option><option>L</option><option>XL</option></select><select><option>Select Color</option><option>Red</option><option>Blue</option><option>Black</option></select></div><div class="price">PKR 2500</div><button class="order-now" onclick="orderNow()">Order Now</button></div>
+        <div class="product"><img src="ready made 5.avif" alt="Readymade 6"><div class="buttons"><select><option>Select Size</option><option>S</option><option>M</option><option>L</option><option>XL</option></select><select><option>Select Color</option><option>Red</option><option>Blue</option><option>Black</option></select></div><div class="price">PKR 2,900</div><button class="order-now" onclick="orderNow()">Order Now</button></div>
+        <div class="product"><img src="ready made 6.avif" alt="Readymade 7"><div class="buttons"><select><option>Select Size</option><option>S</option><option>M</option><option>L</option><option>XL</option></select><select><option>Select Color</option><option>Red</option><option>Blue</option><option>Black</option></select></div><div class="price">PKR 3,500</div><button class="order-now" onclick="orderNow()">Order Now</button></div>
+        <div class="product"><img src="ready made 7.avif" alt="Readymade 8"><div class="buttons"><select><option>Select Size</option><option>S</option><option>M</option><option>L</option><option>XL</option></select><select><option>Select Color</option><option>Red</option><option>Blue</option><option>Black</option></select></div><div class="price">PKR 3,800</div><button class="order-now" onclick="orderNow()">Order Now</button></div>
+        <div class="product"><img src="ready made 8.webp" alt="Readymade 9"><div class="buttons"><select><option>Select Size</option><option>S</option><option>M</option><option>L</option><option>XL</option></select><select><option>Select Color</option><option>Red</option><option>Blue</option><option>Black</option></select></div><div class="price">PKR 4,000</div><button class="order-now" onclick="orderNow()">Order Now</button></div>
+        <div class="product"><img src="ready made 10.webp" alt="Readymade 5"><div class="buttons"><select><option>Select Size</option><option>S</option><option>M</option><option>L</option><option>XL</option></select><select><option>Select Color</option><option>Red</option><option>Blue</option><option>Black</option></select></div><div class="price">PKR 3000</div><button class="order-now" onclick="orderNow()">Order Now</button></div>
+        <div class="product"><img src="ready made 9.avif" alt="Readymade 10"><div class="buttons"><select><option>Select Size</option><option>S</option><option>M</option><option>L</option><option>XL</option></select><select><option>Select Color</option><option>Red</option><option>Blue</option><option>Black</option></select></div><div class="price">PKR 3,900</div><button class="order-now" onclick="orderNow()">Order Now</button></div>
+        <div class="product"><img src="ready made 11.webp" alt="Readymade 10"><div class="buttons"><select><option>Select Size</option><option>S</option><option>M</option><option>L</option><option>XL</option></select><select><option>Select Color</option><option>Red</option><option>Blue</option><option>Black</option></select></div><div class="price">PKR 3,500</div><button class="order-now" onclick="orderNow()">Order Now</button></div>
+
+        <!-- END Products -->
+ <style>
+   
+    .coming-soon {
+      height: 29vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-image: url('images/coming-soon-bg.jpg'); /* Optional: add a nice BG */
+
+      background-position: center;
+      color: #0c2d57;
+      padding: 20px;
+    }
+
+    .coming-soon h1 {
+      font-size: 55px;
+      margin-bottom: 10px;
+    }
+
+    .coming-soon p {
+      font-size: 20px;
+      color: #333;
+    }
+
+    @media screen and (max-width: 1000px) {
+      .coming-soon h1 {
+        font-size: 50px;
+      }
+      .coming-soon p {
+        font-size: 500px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="coming-soon">
+    <div>
+      <h1>Coming Soon!</h1>
+      <p>More Styles Coming Soon - Stay Tuned!!</p>
+    </div>
+  </div>
+  <header>
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<footer style="background: linear-gradient(to right, #0c2d57, #1f4068); color: white; padding: 30px 20px; font-family: Arial, sans-serif; font-size: 16px;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;">
+    
+    <div style="flex: 1; min-width: 250px;">
+      <h3 style="font-size: 20px;">Malik Cloth House</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Main Bazar Bhimber</p>
+      <p><i class="fas fa-envelope"></i> m.a.raza910@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +92 344 5242910</p>
+      <p>
+        <i class="fab fa-whatsapp" style="color:#25D366;"></i>
+        <a href="https://wa.me/923445242910" style="color: #25D366; text-decoration: none;" target="_blank">
+          +92 344 5242910
+        </a>
+      </p>
+    </div>
+
+    <div style="flex: 1; min-width: 250px;">
+      <h3 style="font-size: 20px;">Quick Links</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="index.html" style="color: white; text-decoration: none;"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="unstiched.html" style="color: white; text-decoration: none;"><i class="fas fa-tshirt"></i> Unstitched</a></li>
+        <li><a href="readymade.html" style="color: white; text-decoration: none;"><i class="fas fa-check-circle"></i> Readymade</a></li>
+        <li><a href="sale.html" style="color: white; text-decoration: none;"><i class="fas fa-tags"></i> Sale</a></li>
+        <li><a href="newarrivals.html" style="color: white; text-decoration: none;"><i class="fas fa-star"></i> New Arrivals</a></li>
+      </ul>
+    </div>
+
+    <div style="flex: 1; min-width: 250px;">
+      <h3 style="font-size: 20px;">Follow Us</h3>
+      <p>
+        <a href="https://www.facebook.com/Themalikclothhouse/" target="_blank" style="color: white; text-decoration: none;">
+          <i class="fab fa-facebook"></i> Facebook
+        </a><br>
+        <a href="#" style="color: white; text-decoration: none;">
+          <i class="fab fa-instagram"></i> Instagram
+        </a><br>
+        <a href="http://www.youtube.com/@MalikclothhouseMainBazarbhimbe" target="_blank" style="color: white; text-decoration: none;">
+          <i class="fab fa-youtube"></i> YouTube
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 30px; font-size: 14px;">
+    &copy; 2025 Malik Cloth House. All rights reserved.
+  </div>
+</footer>
+
+    <script>
+        function orderNow() {
+            const name = prompt("Enter your name:");
+            const phone = prompt("Enter your phone number:");
+            const address = prompt("Enter your address:");
+            const payment = prompt("Select Payment Method: Stripe / JazzCash / EasyPaisa / COD");
+         if (name && phone && address && payment) {
+                alert("Thanks " + name + "! Your order has been placed successfully using " + payment + ".");
+            } else {
+                alert("Please fill all the required information to place your order.");
+            }
+        }
+    </script>
+</body>
+</html>

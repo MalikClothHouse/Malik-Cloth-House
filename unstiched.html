@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unstitched - Malik Cloth House</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f8f8f8;
+    }
+    header {
+      background-color: #0c2d57;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    h1 {
+      margin: 0;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .product {
+      border: 1px solid #ddd;
+      background: #fff;
+      margin: 10px;
+      padding: 10px;
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+    }
+    .buttons select {
+      margin: 5px;
+      padding: 5px;
+    }
+    .price {
+      color: green;
+      font-weight: bold;
+    }
+    .order-now {
+      margin-top: 10px;
+      background-color: #0c2d57;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      cursor: pointer;
+    }
+    @media (max-width: 600px) {
+      .product {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>___Unstitched Collection___</h1>
+  </header>
+
+  <div class="gallery">
+    <!-- Example Product Block -->
+    <div class="product">
+      <img src="unstiched 1.webp" alt="Unstitched Product">
+      <div class="buttons">
+        <select><option>Select Size</option><option>S</option><option>M</option><option>L</option></select>
+        <select><option>Select Color</option><option>Red</option><option>Blue</option></select>
+      </div>
+      <div class="price">PKR 2,500</div>
+      <button class="order-now" onclick="orderNow()">Order Now</button>
+    </div>
+     <div class="product">
+      <img src="unstiched 2.webp" alt="Unstitched Product">
+      <div class="buttons">
+        <select><option>Select Size</option><option>S</option><option>M</option><option>L</option></select>
+        <select><option>Select Color</option><option>Red</option><option>Blue</option></select>
+      </div>
+      <div class="price">PKR 2000</div>
+      <button class="order-now" onclick="orderNow()">Order Now</button>
+    </div>
+     <div class="product">
+      <img src="unstiched 3.webp" alt="Unstitched Product">
+      <div class="buttons">
+        <select><option>Select Size</option><option>S</option><option>M</option><option>L</option></select>
+        <select><option>Select Color</option><option>Red</option><option>Blue</option></select>
+      </div>
+      <div class="price">PKR 2000</div>
+      <button class="order-now" onclick="orderNow()">Order Now</button>
+    </div>
+     <div class="product">
+      <img src="unstiched 4.avif" alt="Unstitched Product">
+      <div class="buttons">
+        <select><option>Select Size</option><option>S</option><option>M</option><option>L</option></select>
+        <select><option>Select Color</option><option>Red</option><option>Blue</option></select>
+      </div>
+      <div class="price">PKR 3000</div>
+      <button class="order-now" onclick="orderNow()">Order Now</button>
+    </div>
+     <div class="product">
+      <img src="unstiched 5.webp" alt="Unstitched Product">
+      <div class="buttons">
+        <select><option>Select Size</option><option>S</option><option>M</option><option>L</option></select>
+        <select><option>Select Color</option><option>Red</option><option>Blue</option></select>
+      </div>
+      <div class="price">PKR 3000</div>
+      <button class="order-now" onclick="orderNow()">Order Now</button>
+    </div>
+     <div class="product">
+      <img src="unstiched 6.webp" alt="Unstitched Product">
+      <div class="buttons">
+        <select><option>Select Size</option><option>S</option><option>M</option><option>L</option></select>
+        <select><option>Select Color</option><option>Red</option><option>Blue</option></select>
+      </div>
+      <div class="price">PKR 2000</div>
+      <button class="order-now" onclick="orderNow()">Order Now</button>
+    </div>
+     <div class="product">
+      <img src="unstiched 7.webp" alt="Unstitched Product">
+      <div class="buttons">
+        <select><option>Select Size</option><option>S</option><option>M</option><option>L</option></select>
+        <select><option>Select Color</option><option>Red</option><option>Blue</option></select>
+      </div>
+      <div class="price">PKR 2,500</div>
+      <button class="order-now" onclick="orderNow()">Order Now</button>
+    </div>
+     <div class="product">
+      <img src="unstiched 8.webp" alt="Unstitched Product">
+      <div class="buttons">
+        <select><option>Select Size</option><option>S</option><option>M</option><option>L</option></select>
+        <select><option>Select Color</option><option>Red</option><option>Blue</option></select>
+      </div>
+      <div class="price">PKR 2,000</div>
+      <button class="order-now" onclick="orderNow()">Order Now</button>
+    </div>
+     <div class="product">
+      <img src="unstiched 9.webp" alt="Unstitched Product">
+      <div class="buttons">
+        <select><option>Select Size</option><option>S</option><option>M</option><option>L</option></select>
+        <select><option>Select Color</option><option>Red</option><option>Blue</option></select>
+      </div>
+      <div class="price">PKR 2,500</div>
+      <button class="order-now" onclick="orderNow()">Order Now</button>
+    </div>
+     <div class="product">
+      <img src="unstiched 10.webp" alt="Unstitched Product">
+      <div class="buttons">
+        <select><option>Select Size</option><option>S</option><option>M</option><option>L</option></select>
+        <select><option>Select Color</option><option>Red</option><option>Blue</option></select>
+      </div>
+      <div class="price">PKR 2,500</div>
+      <button class="order-now" onclick="orderNow()">Order Now</button>
+    </div>
+    <!-- Repeat above block 10 times or copy/paste and change image names -->
+  </div>
+   </div>
+
+ <style>
+   
+    .coming-soon {
+      height: 29vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-image: url('images/coming-soon-bg.jpg'); /* Optional: add a nice BG */
+
+      background-position: center;
+      color: #0c2d57;
+      padding: 20px;
+    }
+
+    .coming-soon h1 {
+      font-size: 55px;
+      margin-bottom: 10px;
+    }
+
+    .coming-soon p {
+      font-size: 20px;
+      color: #333;
+    }
+
+    @media screen and (max-width: 1000px) {
+      .coming-soon h1 {
+        font-size: 50px;
+      }
+      .coming-soon p {
+        font-size: 500px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="coming-soon">
+    <div>
+      <h1>Coming Soon!</h1>
+      <p>More Styles Coming Soon - Stay Tuned!!</p>
+    </div>
+</head>
+<body>
+
+ 
+    
+  </div>
+
+  <script>
+    function orderNow() {
+      const name = prompt("Enter your name:");
+      const phone = prompt("Enter your phone number:");
+      const address = prompt("Enter your address:");
+      const payment = prompt("Select Payment Method: Stripe / JazzCash / EasyPaisa / COD");
+      if (name && phone && address && payment) {
+        alert("Thanks " + name + "! Your order has been placed successfully using " + payment + ".");
+      } else {
+        alert("Please fill all the required information to place your order.");
+      }
+    }
+  </script>
+</body>
+</html>
