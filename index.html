@@ -347,19 +347,26 @@ header::after {
   </div>
 </footer>
 
-    <script>
-        function orderNow() {
-            const name = prompt("Enter your name:");
-            const phone = prompt("Enter your phone number:");
-            const address = prompt("Enter your address:");
-            const payment = prompt("Select Payment Method: Stripe / JazzCash / EasyPaisa / COD");
-         if (name && phone && address && payment) {
-                alert("Thanks " + name + "! Your order has been placed successfully using " + payment + ".");
-            } else {
-                alert("Please fill all the required information to place your order.");
-            }
-        }
-    </script>
+  <!-- WhatsApp Order Script -->
+  <script>
+    function orderNow(price) {
+      const name = prompt("Enter your name:");
+      const phone = prompt("Enter your phone number:");
+      const address = prompt("Enter your address:");
+      const payment = prompt("Select Payment Method: EasyPaisa / Cash on Delivery");
+
+      if (name && phone && address && payment) {
+        const message =
+          `New Order:%0AName: ${name}%0APhone: ${phone}%0AAddress: ${address}%0APayment Method: ${payment}%0ATotal: ${price}`;
+        const whatsappNumber = "923445242910"; // WhatsApp number with country code
+
+        const url = `https://wa.me/${whatsappNumber}?text=${message}`;
+        window.open(url, "_blank");
+      } else {
+        alert("Please fill all the required fields to place your order.");
+      }
+    }
+  </script>
       <!-- 🔔 Announcement Poster Popup -->
 <div id="announcementPopup" style="
   position: fixed;
