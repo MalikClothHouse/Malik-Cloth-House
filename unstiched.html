@@ -20,7 +20,8 @@
 
     h1 {
       margin: 0;
-      font-size: 24px;
+      font-size: 28px;
+      letter-spacing: 1px;
     }
 
     .gallery {
@@ -36,20 +37,24 @@
       margin: 10px;
       padding: 10px;
       width: 100%;
-      max-width: 300px;
+      max-width: 280px;
       text-align: center;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
     }
 
     .product img {
       width: 100%;
       height: auto;
+      border-radius: 5px;
     }
 
     .buttons select {
-      margin: 5px;
-      padding: 5px;
+      margin: 5px 0;
+      padding: 7px;
       width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
 
     .price {
@@ -61,11 +66,17 @@
     .order-now {
       background-color: #0c2d57;
       color: white;
-      padding: 8px 15px;
+      padding: 10px;
       border: none;
       cursor: pointer;
       width: 100%;
       font-size: 16px;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    .order-now:hover {
+      background-color: #093a84;
     }
 
     .coming-soon {
@@ -75,7 +86,6 @@
       align-items: center;
       text-align: center;
       background-color: #f0f0f0;
-      background-position: center;
       color: #0c2d57;
       padding: 20px;
     }
@@ -90,13 +100,15 @@
       color: #333;
     }
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 768px) {
       .product {
         width: 90%;
       }
+
       .coming-soon h1 {
         font-size: 40px;
       }
+
       .coming-soon p {
         font-size: 16px;
       }
@@ -106,12 +118,13 @@
 <body>
   <header>
     <h1>___Unstitched Collection___</h1>
+    <p>Malik Cloth House | Main Bazar Bhimber | Director: Malik Ali Raza</p>
   </header>
 
   <div class="gallery">
-    <!-- Product Blocks (10 examples) -->
+    <!-- Product Blocks -->
     <div class="product">
-      <img src="unstiched 1.webp" alt="Unstitched Product">
+      <img src="unstiched 1.webp" alt="Unstitched Product 1">
       <div class="buttons">
         <select><option>Select Size</option><option>S</option><option>M</option><option>L</option></select>
         <select><option>Select Color</option><option>Red</option><option>Blue</option></select>
@@ -127,31 +140,4 @@
     <div class="product"><img src="unstiched 6.webp" alt=""><div class="buttons"><select><option>Select Size</option><option>S</option><option>M</option><option>L</option></select><select><option>Select Color</option><option>Red</option><option>Blue</option></select></div><div class="price">PKR 2,000</div><button class="order-now" onclick="orderNow('PKR 2,000')">Order Now</button></div>
     <div class="product"><img src="unstiched 7.webp" alt=""><div class="buttons"><select><option>Select Size</option><option>S</option><option>M</option><option>L</option></select><select><option>Select Color</option><option>Red</option><option>Blue</option></select></div><div class="price">PKR 2,500</div><button class="order-now" onclick="orderNow('PKR 2,500')">Order Now</button></div>
     <div class="product"><img src="unstiched 8.webp" alt=""><div class="buttons"><select><option>Select Size</option><option>S</option><option>M</option><option>L</option></select><select><option>Select Color</option><option>Red</option><option>Blue</option></select></div><div class="price">PKR 2,000</div><button class="order-now" onclick="orderNow('PKR 2,000')">Order Now</button></div>
-    <div class="product"><img src="unstiched 9.webp" alt=""><div class="buttons"><select><option>Select Size</option><option>S</option><option>M</option><option>L</option></select><select><option>Select Color</option><option>Red</option><option>Blue</option></select></div><div class="price">PKR 2,500</div><button class="order-now" onclick="orderNow('PKR 2,500')">Order Now</button></div>
-    <div class="product"><img src="unstiched 10.webp" alt=""><div class="buttons"><select><option>Select Size</option><option>S</option><option>M</option><option>L</option></select><select><option>Select Color</option><option>Red</option><option>Blue</option></select></div><div class="price">PKR 2,500</div><button class="order-now" onclick="orderNow('PKR 2,500')">Order Now</button></div>
-  </div>
-
-  
-
-  <!-- WhatsApp Order Script -->
-  <script>
-    function orderNow(price) {
-      const name = prompt("Enter your name:");
-      const phone = prompt("Enter your phone number:");
-      const address = prompt("Enter your address:");
-      const payment = prompt("Select Payment Method: EasyPaisa / Cash on Delivery");
-
-      if (name && phone && address && payment) {
-        const message =
-          `New Order:%0AName: ${name}%0APhone: ${phone}%0AAddress: ${address}%0APayment Method: ${payment}%0ATotal: ${price}`;
-        const whatsappNumber = "923445242910"; // WhatsApp number with country code
-
-        const url = `https://wa.me/${whatsappNumber}?text=${message}`;
-        window.open(url, "_blank");
-      } else {
-        alert("Please fill all the required fields to place your order.");
-      }
-    }
-  </script>
-</body>
-</html>
+    <div class="product"><img src="unstiched 9.webp" alt=""><div class="buttons"><select><option>Select Size</option><option>S</option><option>M</option><option>L</option></select><select><option>Select Color</option><o
