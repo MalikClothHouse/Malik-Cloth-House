@@ -43,6 +43,11 @@
     button:hover {
       background-color: #0a2447;
     }
+    .payment-info {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #0c2d57;
+    }
   </style>
 </head>
 <body>
@@ -52,15 +57,15 @@
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="tel" name="phone" placeholder="Phone Number" required>
       <input type="text" name="address" placeholder="Delivery Address" required>
-      <select name="size" required>
-        <p><strong>EasyPaisa Number:</strong> 03445242910</p>
 
+      <select name="size" required>
         <option value="">Select Size</option>
         <option>S</option>
         <option>M</option>
         <option>L</option>
         <option>XL</option>
       </select>
+
       <select name="payment_method" required>
         <option value="">Select Payment Method</option>
         <option value="COD">Cash on Delivery</option>
@@ -68,9 +73,13 @@
         <option value="EasyPaisa">EasyPaisa</option>
         <option value="Stripe">Stripe</option>
       </select>
+
+      <div class="payment-info">
+        EasyPaisa Number: 0344-5242910
+      </div>
+
       <textarea name="additional_notes" placeholder="Any Notes (Optional)"></textarea>
 
-      <!-- This disables captcha and redirects to thank you page -->
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="thankyou.html">
 
