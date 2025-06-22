@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Place Your Order - Malik Cloth House</title>
   <style>
     body {
@@ -29,6 +29,12 @@
       border: 1px solid #ccc;
       border-radius: 5px;
     }
+    .payment-instructions {
+      display: none;
+      margin-top: 10px;
+      color: #d40000;
+      font-weight: bold;
+    }
     button {
       margin-top: 20px;
       width: 100%;
@@ -43,42 +49,38 @@
     button:hover {
       background-color: #0a2447;
     }
-    .payment-info {
-      margin-top: 15px;
-      font-weight: bold;
-      color: #0c2d57;
-    }
   </style>
+  <script>
+    function showInstructions(value) {
+      const instructions = document.getElementById('instructions');
+      if (value === 'JazzCash' || value === 'EasyPaisa') {
+        instructions.style.display = 'block';
+      } else {
+        instructions.style.display = 'none';
+      }
+    }
+  </script>
 </head>
 <body>
+
   <div class="container">
     <h2>Place Your Order</h2>
     <form action="https://formsubmit.co/batoolalimalik74@gmail.com" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="tel" name="phone" placeholder="Phone Number" required>
-      <input type="text" name="address" placeholder="Delivery Address" required>
+      <input type="text" name="address" placeholder="Home Address" required>
 
-      <select name="size" required>
-        <option value="">Select Size</option>
-        <option>S</option>
-        <option>M</option>
-        <option>L</option>
-        <option>XL</option>
-      </select>
-
-      <select name="payment_method" required>
+      <select name="payment_method" required onchange="showInstructions(this.value)">
         <option value="">Select Payment Method</option>
-        <option value="COD">Cash on Delivery</option>
         <option value="JazzCash">JazzCash</option>
         <option value="EasyPaisa">EasyPaisa</option>
-        <option value="Stripe">Stripe</option>
+        <option value="CashOnDelivery">Cash on Delivery</option>
       </select>
 
-      <div class="payment-info">
-        EasyPaisa Number: 0344-5242910
+      <div class="payment-instructions" id="instructions">
+        Pay to this number: <strong>03445242910</strong><br>
+        After sending, click Submit to place your order.
       </div>
-
-      <textarea name="additional_notes" placeholder="Any Notes (Optional)"></textarea>
 
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="thankyou.html">
@@ -86,5 +88,6 @@
       <button type="submit">Submit Order</button>
     </form>
   </div>
+
 </body>
 </html>
