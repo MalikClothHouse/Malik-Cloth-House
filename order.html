@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Place Your Order - Malik Cloth House</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #f0f2f5, #ffffff);
+      padding: 30px;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #0c2d57;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      background-color: #0c2d57;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0a2447;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Place Your Order</h2>
+    <form action="https://formsubmit.co/batoolalimalik74@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="text" name="address" placeholder="Delivery Address" required>
+      <select name="size" required>
+        <p><strong>EasyPaisa Number:</strong> 03445242910</p>
+
+        <option value="">Select Size</option>
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+        <option>XL</option>
+      </select>
+      <select name="payment_method" required>
+        <option value="">Select Payment Method</option>
+        <option value="COD">Cash on Delivery</option>
+        <option value="JazzCash">JazzCash</option>
+        <option value="EasyPaisa">EasyPaisa</option>
+        <option value="Stripe">Stripe</option>
+      </select>
+      <textarea name="additional_notes" placeholder="Any Notes (Optional)"></textarea>
+
+      <!-- This disables captcha and redirects to thank you page -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="thankyou.html">
+
+      <button type="submit">Submit Order</button>
+    </form>
+  </div>
+</body>
+</html>
