@@ -395,34 +395,10 @@ header::after {
   </div>
 
   <script>
-    function sendWhatsApp(event) {
-      event.preventDefault();
+  
 
-      // Collect input values
-      const name = document.getElementById("fname").value + " " + document.getElementById("lname").value;
-      const country = document.getElementById("country").value;
-      const address = document.getElementById("address").value;
-      const apt = document.getElementById("apt").value;
-      const city = document.getElementById("city").value;
-      const postal = document.getElementById("postal").value;
-      const phone = document.getElementById("phone").value;
-
-      // Prepare WhatsApp message
-      const message = `*New Order Received!*%0A%0A` +
-                      `*Name:* ${name}%0A` +
-                      `*Country:* ${country}%0A` +
-                      `*Address:* ${address} ${apt}%0A` +
-                      `*City:* ${city}%0A` +
-                      `*Postal Code:* ${postal}%0A` +
-                      `*Phone:* ${phone}`;
-
-      // WhatsApp link with your number
-      const whatsappNumber = "923445242910"; // Don't add +
-      const url = `https://wa.me/${whatsappNumber}?text=${message}`;
-
-      // Open WhatsApp chat
-      window.open(url, '_blank');
-    }
+  
+    
   </script>
 
 </body>
