@@ -313,6 +313,120 @@ header::after {
     &copy; 2025 Malik Cloth House. All rights reserved.
   </div>
 </footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Now - Malik Cloth House</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    .order-form {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .order-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .order-form label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    .order-form input, .order-form select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+    }
+    .order-form button {
+      margin-top: 20px;
+      width: 100%;
+      background-color: #004080;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="order-form">
+    <h2>Delivery Information</h2>
+    <form onsubmit="sendWhatsApp(event)">
+      <label>Country/Region</label>
+      <select id="country" required>
+        <option value="">Select Country</option>
+        <option value="Pakistan">Pakistan</option>
+      </select>
+
+      <label>First Name</label>
+      <input type="text" id="fname" required>
+
+      <label>Last Name</label>
+      <input type="text" id="lname" required>
+
+      <label>Address</label>
+      <input type="text" id="address" required>
+
+      <label>Apartment, Suite (optional)</label>
+      <input type="text" id="apt">
+
+      <label>City</label>
+      <input type="text" id="city" required>
+
+      <label>Postal Code</label>
+      <input type="text" id="postal" required>
+
+      <label>Phone</label>
+      <input type="tel" id="phone" required>
+
+      <button type="submit">Place Order via WhatsApp</button>
+    </form>
+  </div>
+
+  <script>
+    function sendWhatsApp(event) {
+      event.preventDefault();
+
+      // Collect input values
+      const name = document.getElementById("fname").value + " " + document.getElementById("lname").value;
+      const country = document.getElementById("country").value;
+      const address = document.getElementById("address").value;
+      const apt = document.getElementById("apt").value;
+      const city = document.getElementById("city").value;
+      const postal = document.getElementById("postal").value;
+      const phone = document.getElementById("phone").value;
+
+      // Prepare WhatsApp message
+      const message = `*New Order Received!*%0A%0A` +
+                      `*Name:* ${name}%0A` +
+                      `*Country:* ${country}%0A` +
+                      `*Address:* ${address} ${apt}%0A` +
+                      `*City:* ${city}%0A` +
+                      `*Postal Code:* ${postal}%0A` +
+                      `*Phone:* ${phone}`;
+
+      // WhatsApp link with your number
+      const whatsappNumber = "923445242910"; // Don't add +
+      const url = `https://wa.me/${whatsappNumber}?text=${message}`;
+
+      // Open WhatsApp chat
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
 
   <!-- WhatsApp Order Script -->
   <script>
